@@ -1,0 +1,49 @@
+{
+  "canisters": {
+    "AquaClean_backend": {
+      "build": "npx azle AquaClean_backend",
+      "candid": "src/AquaClean_backend/AquaClean_backend.did",
+      "gzip": true,
+      "main": "src/AquaClean_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/AquaClean_backend/AquaClean_backend.wasm"
+    },
+    "AquaClean_frontend": {
+      "dependencies": [
+        "AquaClean_backend"
+      ],
+      "source": [
+        "src/AquaClean_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "AquaClean_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
