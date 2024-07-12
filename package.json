@@ -11,9 +11,18 @@
     "start": "npm start --workspaces --if-present",
     "test": "npm test --workspaces --if-present"
   },
+  
   "type": "module",
   "workspaces": [
     "src/AquaClean_backend",
     "src/AquaClean_frontend"
-  ]
+  ],
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21"
+  }
 }
